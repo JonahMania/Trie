@@ -17,8 +17,6 @@ struct trieNode
     trieNode* children[ARRAY_SIZE];  
 };
 
-//trieNode* children[ARRAY_SIZE] = {};
-
 class Trie
 {
     public:
