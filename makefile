@@ -1,6 +1,5 @@
 NAME = trietest
-SRC = trie.cpp\
-      trietest.cpp\
+SRC = trietest.cpp\
 
 OBJ = $(SRC:.cpp=.o)
 RM = rm -f
