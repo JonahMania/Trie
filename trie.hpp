@@ -193,21 +193,21 @@ bool Trie<T>::search( std::string key )
         return true;
     return false;
 }
+//Searches the trie and returns the value at a specified key if found
 template <typename T>
 T Trie<T>::getValue( std::string key )
 {
     trieNode<T>* curr = root;
     for( int i = 0; i < key.size(); ++i )
     {
-        //If the the node corresponding to the next letter of the key does not exist return false
+        //If the the node corresponding to the next letter of the key does not exist break out of the loop
         if( curr->children[ key[i] - 97 ] == NULL )
             break;
         //If the the node corresponding to the next letter of the key does exist move to that node
         curr = curr->children[ key[i] - 97 ];
     }
-    //If the last letter in the key is the leaf return true
+    //If the last letter in the key is the leaf return the value of that key
     if( curr->isLeaf )
         return curr->value;
-    //return false;
 }
 #endif
